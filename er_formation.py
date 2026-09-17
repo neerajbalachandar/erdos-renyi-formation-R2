@@ -922,13 +922,13 @@ all_points = np.concatenate(
 
 )
 
-xmin = all_points[:, :, 0].min() - 1.0
+xmin = all_points[:, :, 0].min() - 0.1
 
-xmax = all_points[:, :, 0].max() + 1.0
+xmax = all_points[:, :, 0].max() + 0.1
 
-ymin = all_points[:, :, 1].min() - 1.0
+ymin = all_points[:, :, 1].min() - 0.1
 
-ymax = all_points[:, :, 1].max() + 1.0
+ymax = all_points[:, :, 1].max() + 0.1
 
 ax.set_xlim(
 
@@ -960,8 +960,7 @@ ax.set_ylabel("y")
 
 ax.set_title(
 
-    "Distributed Formation Control"
-
+    "Distributed Formation Control on an Erdos-Renyi Graph"
 )
 
 scatter = ax.scatter(
@@ -1055,9 +1054,9 @@ def update(frame):
 
     title_text.set_text(
 
-        f"Name = {NAME}    "
+        f"{NAME}    "
 
-        f"Current letter = {letter}"
+        # f"Current letter = {letter}"
 
     )
 
